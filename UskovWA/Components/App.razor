@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using UskovWA.Components.Layout
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,12 +10,17 @@
     <link rel="stylesheet" href="app.css" />
     <link rel="stylesheet" href="UskovWA.styles.css" />
     <link rel="icon" type="image/png" href="favicon.png" />
-    <HeadOutlet />
+    <link href="css/site.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+     <HeadOutlet />
 </head>
 
 <body>
-    <Routes />
+    <Routes @rendermode=RenderMode.InteractiveServer />
+
+
     <script src="_framework/blazor.web.js"></script>
 </body>
 
 </html>
+

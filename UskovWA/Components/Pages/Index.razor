@@ -1,0 +1,82 @@
+﻿@page "/"
+@using Microsoft.AspNetCore.Components.Forms
+
+<div class="page-container">
+    <div class="content-box">
+        <h2 class="art-title">"Сложные деревянные изделия"</h2>
+        <button @onclick="ShowModal" class="order-button">Сделать заказ</button>
+    </div>
+</div>
+
+<!-- Модальное окно -->
+@if (showModal)
+{
+    <div class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-button" @onclick="HideModal">&times;</span>
+            <h3>Оформление заказа</h3>
+
+            <EditForm Model="@_orderData" OnValidSubmit="@HandleSubmit">
+                <div class="form-group">
+                    <label>Имя:</label>
+                    <InputText @bind-Value="_orderData.Name" class="form-control" />
+                </div>
+
+                <div class="form-group">
+                    <label>Номер телефона:</label>
+                    <InputText @bind-Value="_orderData.Phone" class="form-control" />
+                </div>
+
+                <div class="form-group">
+                    <label>Email:</label>
+                    <InputText @bind-Value="_orderData.Email" class="form-control" />
+                </div>
+
+                <div class="form-group">
+                    <label>Чертеж или эскиз:</label>
+                    <InputFile OnChange="@HandleFileUpload" class="form-control" />
+                    @if (!string.IsNullOrEmpty(_orderData.FileName))
+                    {
+                        <div>Выбран файл: @_orderData.FileName</div>
+                    }
+                </div>
+
+                <button type="submit" class="submit-button">Отправить заявку</button>
+            </EditForm>
+        </div>
+    </div>
+}
+
+@code {
+    private bool showModal = false;
+    private OrderData _orderData = new();
+
+    private void ShowModal(){
+
+        showModal = true;
+        StateHasChanged();
+    }
+    private void HideModal() => showModal = false;
+
+    private void HandleSubmit()
+    {
+        Console.WriteLine($"Заказ оформлен: {_orderData.Name}, {_orderData.Phone}");
+        // Здесь можно добавить отправку данных на сервер
+        HideModal();
+    }
+
+    private void HandleFileUpload(InputFileChangeEventArgs e)
+    {
+        var file = e.File;
+        _orderData.FileName = file.Name;
+        // Здесь можно добавить обработку файла
+    }
+
+    public class OrderData
+    {
+        public string Name { get; set; } = "";
+        public string Phone { get; set; } = "";
+        public string Email { get; set; } = "";
+        public string FileName { get; set; } = "";
+    }
+}

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("YouGileMethods")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7ea4858699dc96f3caf7cd455de1f3b32e06fe7f")]
 [assembly: System.Reflection.AssemblyProductAttribute("YouGileMethods")]
 [assembly: System.Reflection.AssemblyTitleAttribute("YouGileMethods")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

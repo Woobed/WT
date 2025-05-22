@@ -1,0 +1,846 @@
+{
+  "Version": 1,
+  "Hash": "jglKg8RZMifTJn1j9uSNviOS0oaZDoO+rKavlEw1XWM=",
+  "Source": "UskovWA",
+  "BasePath": "_content/UskovWA",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "UskovWA\\wwwroot",
+      "Source": "UskovWA",
+      "ContentRoot": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\wwwroot\\",
+      "BasePath": "_content/UskovWA",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\obj\\Debug\\net8.0\\scopedcss\\bundle\\UskovWA.styles.css",
+      "SourceId": "UskovWA",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "BasePath": "_content/UskovWA",
+      "RelativePath": "UskovWA#[.{fingerprint}]?.styles.css",
+      "AssetKind": "All",
+      "AssetMode": "CurrentProject",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ApplicationBundle",
+      "Fingerprint": "vd9ucyk268",
+      "Integrity": "/WC9lkyhi8zl9LMxPwG2O3pe8y/cuQBD3Yw8ES2EjUI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\obj\\Debug\\net8.0\\scopedcss\\bundle\\UskovWA.styles.css"
+    },
+    {
+      "Identity": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\UskovWA.bundle.scp.css",
+      "SourceId": "UskovWA",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "BasePath": "_content/UskovWA",
+      "RelativePath": "UskovWA#[.{fingerprint}]!.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "Fingerprint": "vd9ucyk268",
+      "Integrity": "/WC9lkyhi8zl9LMxPwG2O3pe8y/cuQBD3Yw8ES2EjUI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\UskovWA.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\wwwroot\\app.css",
+      "SourceId": "UskovWA",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\wwwroot\\",
+      "BasePath": "_content/UskovWA",
+      "RelativePath": "app#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "71tcdhy25q",
+      "Integrity": "BTEbQ21nmWWCaApyHvNR4pM6UrespbNYyzD0BLuybxs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\app.css"
+    },
+    {
+      "Identity": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "SourceId": "UskovWA",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\wwwroot\\",
+      "BasePath": "_content/UskovWA",
+      "RelativePath": "bootstrap/bootstrap.min#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "bpk8xqwxhs",
+      "Integrity": "z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "SourceId": "UskovWA",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\wwwroot\\",
+      "BasePath": "_content/UskovWA",
+      "RelativePath": "bootstrap/bootstrap.min.css#[.{fingerprint}]?.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8inm30yfxf",
+      "Integrity": "gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Identity": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\wwwroot\\CSS\\site.css",
+      "SourceId": "UskovWA",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\wwwroot\\",
+      "BasePath": "_content/UskovWA",
+      "RelativePath": "CSS/site#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "wdi28w0st7",
+      "Integrity": "bK40VFQAUtn1y6cFQlPueEVkvUTmLRmigM9ir/xizP4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\CSS\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\wwwroot\\favicon.png",
+      "SourceId": "UskovWA",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\wwwroot\\",
+      "BasePath": "_content/UskovWA",
+      "RelativePath": "favicon#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ifv42okdf2",
+      "Integrity": "4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon.png"
+    },
+    {
+      "Identity": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\wwwroot\\images\\BaseBackground.jpg",
+      "SourceId": "UskovWA",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\wwwroot\\",
+      "BasePath": "_content/UskovWA",
+      "RelativePath": "images/BaseBackground#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4gv548s0ub",
+      "Integrity": "dJJ/TI8LFdBBenMiix6afHYp2nlDVULKz3fpvcbs2uk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\BaseBackground.jpg"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "app.71tcdhy25q.css",
+      "AssetFile": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\wwwroot\\app.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4079"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BTEbQ21nmWWCaApyHvNR4pM6UrespbNYyzD0BLuybxs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 22 May 2025 15:35:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "71tcdhy25q"
+        },
+        {
+          "Name": "label",
+          "Value": "app.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-BTEbQ21nmWWCaApyHvNR4pM6UrespbNYyzD0BLuybxs="
+        }
+      ]
+    },
+    {
+      "Route": "app.css",
+      "AssetFile": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\wwwroot\\app.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4079"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BTEbQ21nmWWCaApyHvNR4pM6UrespbNYyzD0BLuybxs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 22 May 2025 15:35:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-BTEbQ21nmWWCaApyHvNR4pM6UrespbNYyzD0BLuybxs="
+        }
+      ]
+    },
+    {
+      "Route": "bootstrap/bootstrap.min.bpk8xqwxhs.css",
+      "AssetFile": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "162720"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 22 May 2025 11:13:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bpk8xqwxhs"
+        },
+        {
+          "Name": "label",
+          "Value": "bootstrap/bootstrap.min.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg="
+        }
+      ]
+    },
+    {
+      "Route": "bootstrap/bootstrap.min.css",
+      "AssetFile": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "162720"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 22 May 2025 11:13:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg="
+        }
+      ]
+    },
+    {
+      "Route": "bootstrap/bootstrap.min.css.8inm30yfxf.map",
+      "AssetFile": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "449111"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 22 May 2025 11:13:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8inm30yfxf"
+        },
+        {
+          "Name": "label",
+          "Value": "bootstrap/bootstrap.min.css.map"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ="
+        }
+      ]
+    },
+    {
+      "Route": "bootstrap/bootstrap.min.css.map",
+      "AssetFile": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "449111"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 22 May 2025 11:13:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ="
+        }
+      ]
+    },
+    {
+      "Route": "CSS/site.css",
+      "AssetFile": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\wwwroot\\CSS\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2628"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bK40VFQAUtn1y6cFQlPueEVkvUTmLRmigM9ir/xizP4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 22 May 2025 17:28:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bK40VFQAUtn1y6cFQlPueEVkvUTmLRmigM9ir/xizP4="
+        }
+      ]
+    },
+    {
+      "Route": "CSS/site.wdi28w0st7.css",
+      "AssetFile": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\wwwroot\\CSS\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2628"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bK40VFQAUtn1y6cFQlPueEVkvUTmLRmigM9ir/xizP4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 22 May 2025 17:28:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wdi28w0st7"
+        },
+        {
+          "Name": "label",
+          "Value": "CSS/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bK40VFQAUtn1y6cFQlPueEVkvUTmLRmigM9ir/xizP4="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ifv42okdf2.png",
+      "AssetFile": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\wwwroot\\favicon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1148"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 22 May 2025 11:13:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ifv42okdf2"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.png",
+      "AssetFile": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\wwwroot\\favicon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1148"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 22 May 2025 11:13:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
+        }
+      ]
+    },
+    {
+      "Route": "images/BaseBackground.4gv548s0ub.jpg",
+      "AssetFile": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\wwwroot\\images\\BaseBackground.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "194193"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"dJJ/TI8LFdBBenMiix6afHYp2nlDVULKz3fpvcbs2uk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 22 May 2025 15:49:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4gv548s0ub"
+        },
+        {
+          "Name": "label",
+          "Value": "images/BaseBackground.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-dJJ/TI8LFdBBenMiix6afHYp2nlDVULKz3fpvcbs2uk="
+        }
+      ]
+    },
+    {
+      "Route": "images/BaseBackground.jpg",
+      "AssetFile": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\wwwroot\\images\\BaseBackground.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "194193"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"dJJ/TI8LFdBBenMiix6afHYp2nlDVULKz3fpvcbs2uk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 22 May 2025 15:49:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-dJJ/TI8LFdBBenMiix6afHYp2nlDVULKz3fpvcbs2uk="
+        }
+      ]
+    },
+    {
+      "Route": "UskovWA.bundle.scp.css",
+      "AssetFile": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\UskovWA.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2182"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/WC9lkyhi8zl9LMxPwG2O3pe8y/cuQBD3Yw8ES2EjUI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 22 May 2025 17:25:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/WC9lkyhi8zl9LMxPwG2O3pe8y/cuQBD3Yw8ES2EjUI="
+        }
+      ]
+    },
+    {
+      "Route": "UskovWA.styles.css",
+      "AssetFile": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\obj\\Debug\\net8.0\\scopedcss\\bundle\\UskovWA.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2182"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/WC9lkyhi8zl9LMxPwG2O3pe8y/cuQBD3Yw8ES2EjUI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 22 May 2025 17:25:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/WC9lkyhi8zl9LMxPwG2O3pe8y/cuQBD3Yw8ES2EjUI="
+        }
+      ]
+    },
+    {
+      "Route": "UskovWA.vd9ucyk268.bundle.scp.css",
+      "AssetFile": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\UskovWA.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2182"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/WC9lkyhi8zl9LMxPwG2O3pe8y/cuQBD3Yw8ES2EjUI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 22 May 2025 17:25:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vd9ucyk268"
+        },
+        {
+          "Name": "label",
+          "Value": "UskovWA.bundle.scp.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/WC9lkyhi8zl9LMxPwG2O3pe8y/cuQBD3Yw8ES2EjUI="
+        }
+      ]
+    },
+    {
+      "Route": "UskovWA.vd9ucyk268.styles.css",
+      "AssetFile": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\obj\\Debug\\net8.0\\scopedcss\\bundle\\UskovWA.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2182"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/WC9lkyhi8zl9LMxPwG2O3pe8y/cuQBD3Yw8ES2EjUI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 22 May 2025 17:25:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vd9ucyk268"
+        },
+        {
+          "Name": "label",
+          "Value": "UskovWA.styles.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/WC9lkyhi8zl9LMxPwG2O3pe8y/cuQBD3Yw8ES2EjUI="
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\UskovWA.bundle.scp.css",
+      "PackagePath": "staticwebassets\\UskovWA.vd9ucyk268.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\wwwroot\\CSS\\site.css",
+      "PackagePath": "staticwebassets\\CSS\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\wwwroot\\images\\BaseBackground.jpg",
+      "PackagePath": "staticwebassets\\images\\BaseBackground.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.UskovWA.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.UskovWA.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.UskovWA.props",
+      "PackagePath": "build\\UskovWA.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.UskovWA.props",
+      "PackagePath": "buildMultiTargeting\\UskovWA.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.UskovWA.props",
+      "PackagePath": "buildTransitive\\UskovWA.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
