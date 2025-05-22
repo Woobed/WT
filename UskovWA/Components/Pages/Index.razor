@@ -1,5 +1,9 @@
 ﻿@page "/"
 @using Microsoft.AspNetCore.Components.Forms
+@using System.ComponentModel.DataAnnotations
+@using Microsoft.Extensions.Hosting
+@using System.Text.RegularExpressions
+@inject IWebHostEnvironment Environment
 
 <div class="page-container">
     <div class="content-box">
@@ -7,6 +11,21 @@
         <button @onclick="ShowModal" class="order-button">Сделать заказ</button>
     </div>
 </div>
+
+<!-- Уведомление об успешной отправке -->
+@if (showSuccessNotification)
+{
+    <div class="notification-overlay">
+        <div class="notification-box alert alert-success">
+            <div class="notification-content">
+                <span class="notification-close" @onclick="HideNotification">&times;</span>
+                <h3>Спасибо за заказ!</h3>
+                <p>Ваша заявка успешно отправлена. Мы свяжемся с вами в ближайшее время.</p>
+                <p>Номер заявки: @lastOrderNumber</p>
+            </div>
+        </div>
+    </div>
+}
 
 <!-- Модальное окно -->
 @if (showModal)
@@ -17,27 +36,43 @@
             <h3>Оформление заказа</h3>
 
             <EditForm Model="@_orderData" OnValidSubmit="@HandleSubmit">
+                <DataAnnotationsValidator />
+                <ValidationSummary />
+
                 <div class="form-group">
-                    <label>Имя:</label>
+                    <label>ФИО:</label>
                     <InputText @bind-Value="_orderData.Name" class="form-control" />
+                    <ValidationMessage For="@(() => _orderData.Name)" />
                 </div>
 
                 <div class="form-group">
                     <label>Номер телефона:</label>
                     <InputText @bind-Value="_orderData.Phone" class="form-control" />
+                    <ValidationMessage For="@(() => _orderData.Phone)" />
                 </div>
 
                 <div class="form-group">
                     <label>Email:</label>
                     <InputText @bind-Value="_orderData.Email" class="form-control" />
+                    <ValidationMessage For="@(() => _orderData.Email)" />
                 </div>
 
                 <div class="form-group">
                     <label>Чертеж или эскиз:</label>
-                    <InputFile OnChange="@HandleFileUpload" class="form-control" />
-                    @if (!string.IsNullOrEmpty(_orderData.FileName))
+                    <InputFile OnChange="@HandleFileSelect"
+                               class="form-control"
+                               accept=".dwg,.dxf,.dwt,.dgn,.ipt,.iam,.prt,.asm,.pdf,.svg,.step,.stp,.iges,.igs,.sat" />
+
+                    @if (_orderData.SelectedFile != null)
                     {
-                        <div>Выбран файл: @_orderData.FileName</div>
+                        <div class="file-info mt-2">
+                            Выбран файл: @_orderData.SelectedFile.Name
+                            <br>Размер: @(_orderData.SelectedFile.Size / 1024) КБ
+                        </div>
+                    }
+                    @if (!string.IsNullOrEmpty(errorMessage))
+                    {
+                        <div class="alert alert-danger mt-2">@errorMessage</div>
                     }
                 </div>
 
@@ -47,36 +82,161 @@
     </div>
 }
 
-@code {
-    private bool showModal = false;
-    private OrderData _orderData = new();
-
-    private void ShowModal(){
-
-        showModal = true;
-        StateHasChanged();
+<style>
+    .notification-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
     }
+
+    .notification-box {
+        background: white;
+        padding: 2rem;
+        border-radius: 8px;
+        max-width: 500px;
+        width: 90%;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        position: relative;
+    }
+
+    .notification-close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+</style>
+
+@code {
+    private string errorMessage;
+    private bool showModal = false;
+    private bool showSuccessNotification = false;
+    private string lastOrderNumber = "";
+    private OrderModel _orderData = new();
+
+    private void ShowModal() => showModal = true;
     private void HideModal() => showModal = false;
 
-    private void HandleSubmit()
+    private void ShowNotification()
     {
-        Console.WriteLine($"Заказ оформлен: {_orderData.Name}, {_orderData.Phone}");
-        // Здесь можно добавить отправку данных на сервер
-        HideModal();
+        lastOrderNumber = Guid.NewGuid().ToString().Substring(0, 8).ToUpper();
+        showSuccessNotification = true;
     }
 
-    private void HandleFileUpload(InputFileChangeEventArgs e)
+    private void HideNotification() => showSuccessNotification = false;
+
+    private async Task HandleFileSelect(InputFileChangeEventArgs e)
     {
-        var file = e.File;
-        _orderData.FileName = file.Name;
-        // Здесь можно добавить обработку файла
+        try
+        {
+            errorMessage = null;
+            var file = e.File;
+            var maxFileSize = 10 * 1024 * 1024; // 10MB
+
+            // Проверка размера файла
+            if (file.Size > maxFileSize)
+            {
+                errorMessage = $"Файл слишком большой. Максимальный размер: {maxFileSize / (1024 * 1024)} MB";
+                return;
+            }
+
+            // Проверка расширения
+            var allowedExtensions = new[] { ".dwg", ".dxf", ".pdf", ".svg" };
+            var fileExtension = Path.GetExtension(file.Name).ToLower();
+
+            if (!allowedExtensions.Contains(fileExtension))
+            {
+                errorMessage = $"Недопустимый формат файла. Разрешены: {string.Join(", ", allowedExtensions)}";
+                return;
+            }
+
+            // Сохраняем информацию о выбранном файле
+            _orderData.SelectedFile = file;
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Ошибка при выборе файла: {ex.Message}";
+        }
+        finally
+        {
+            StateHasChanged();
+        }
     }
 
-    public class OrderData
+    private async Task HandleSubmit()
     {
-        public string Name { get; set; } = "";
-        public string Phone { get; set; } = "";
-        public string Email { get; set; } = "";
-        public string FileName { get; set; } = "";
+        try
+        {
+            errorMessage = null;
+
+            // Проверка наличия файла
+            if (_orderData.SelectedFile == null)
+            {
+                errorMessage = "Пожалуйста, выберите файл";
+                return;
+            }
+
+            // Генерация имени файла
+            var cleanName = Regex.Replace(_orderData.Name.Trim(), "[^a-zA-Z0-9а-яА-Я]", "_");
+            var timestamp = DateTime.Now.ToString("yyyyMMdd_HHmmss");
+            var fileExtension = Path.GetExtension(_orderData.SelectedFile.Name).ToLower();
+            var newFileName = $"{cleanName}_{timestamp}{fileExtension}";
+
+            // Создаем папку для загрузок, если ее нет
+            var uploadsFolder = Path.Combine(Environment.WebRootPath, "uploads");
+            Directory.CreateDirectory(uploadsFolder);
+
+            // Сохраняем файл и сразу читаем его содержимое
+            var filePath = Path.Combine(uploadsFolder, newFileName);
+
+            using (var memoryStream = new MemoryStream())
+            {
+                // Копируем файл в memoryStream
+                await _orderData.SelectedFile.OpenReadStream().CopyToAsync(memoryStream);
+
+                // Сохраняем на диск
+                await using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    memoryStream.Position = 0;
+                    await memoryStream.CopyToAsync(fileStream);
+                }
+
+                // Сохраняем содержимое файла
+                _orderData.FileContent = memoryStream.ToArray();
+            }
+
+            // Проверяем, что файл сохранен
+            if (!File.Exists(filePath) || new FileInfo(filePath).Length == 0)
+            {
+                errorMessage = "Ошибка сохранения файла";
+                return;
+            }
+
+            // Сохраняем имя файла
+            _orderData.FileName = newFileName;
+
+            // Здесь можно добавить сохранение заявки в базу данных
+            Console.WriteLine($"Заказ оформлен: {_orderData.Name}, {_orderData.Phone}, Файл: {_orderData.FileName}");
+
+            // Закрываем модальное окно и показываем уведомление
+            HideModal();
+            ShowNotification();
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Ошибка при отправке заявки: {ex.Message}";
+        }
+        finally
+        {
+            StateHasChanged();
+        }
     }
 }
