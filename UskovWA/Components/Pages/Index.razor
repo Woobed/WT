@@ -60,8 +60,8 @@
                 <div class="form-group">
                     <label>Чертеж или эскиз:</label>
                     <InputFile OnChange="@HandleFileSelect"
-                               class="form-control"
-                               accept=".dwg,.dxf,.dwt,.dgn,.ipt,.iam,.prt,.asm,.pdf,.svg,.step,.stp,.iges,.igs,.sat" />
+                    class="form-control"
+                    accept=".dwg,.dxf,.dwt,.dgn,.ipt,.iam,.prt,.asm,.pdf,.svg,.step,.stp,.iges,.igs,.sat" />
 
                     @if (_orderData.SelectedFile != null)
                     {
@@ -84,34 +84,34 @@
 
 <style>
     .notification-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(0,0,0,0.5);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
     }
 
     .notification-box {
-        background: white;
-        padding: 2rem;
-        border-radius: 8px;
-        max-width: 500px;
-        width: 90%;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        position: relative;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: relative;
     }
 
     .notification-close {
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-        font-size: 1.5rem;
-        cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
     }
 </style>
 
@@ -135,6 +135,7 @@
 
     private async Task HandleFileSelect(InputFileChangeEventArgs e)
     {
+        await Task.Run(() => { 
         try
         {
             errorMessage = null;
@@ -169,6 +170,7 @@
         {
             StateHasChanged();
         }
+        });
     }
 
     private async Task HandleSubmit()
@@ -220,7 +222,7 @@
                 return;
             }
 
-            // Сохраняем имя файла
+
             _orderData.FileName = newFileName;
 
             // Здесь можно добавить сохранение заявки в базу данных
