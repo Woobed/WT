@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "mpTnAwvhn8M=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\UskovWA.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\nshin\\.nuget\\packages\\microsoft.extensions.configuration\\9.0.5\\microsoft.extensions.configuration.9.0.5.nupkg.sha512",
+    "C:\\Users\\nshin\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\9.0.5\\microsoft.extensions.configuration.abstractions.9.0.5.nupkg.sha512",
+    "C:\\Users\\nshin\\.nuget\\packages\\microsoft.extensions.primitives\\9.0.5\\microsoft.extensions.primitives.9.0.5.nupkg.sha512"
+  ],
+  "logs": []
+}
