@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("YouGileMethods")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Postgres")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d6b270dcb954eadc2468952d236c9a16ce363acd")]
-[assembly: System.Reflection.AssemblyProductAttribute("YouGileMethods")]
-[assembly: System.Reflection.AssemblyTitleAttribute("YouGileMethods")]
+[assembly: System.Reflection.AssemblyProductAttribute("Postgres")]
+[assembly: System.Reflection.AssemblyTitleAttribute("Postgres")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Создано классом WriteCodeFragment MSBuild.
