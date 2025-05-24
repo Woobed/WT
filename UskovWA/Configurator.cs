@@ -6,22 +6,13 @@ using YouGileMethods.Models;
 
 namespace UskovWA
 {
-    public class ApiWorker
+    public static class Configurator
     {
-        IConfigurationRoot Configuration { get; set; }
-        public ApiWorker() { 
-            Initialize();
-        }
-
-        void Initialize()
-        {
-            Configuration = new ConfigurationBuilder()
+        public static ApiSettings GetApiData() {
+            var Configuration = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json")
                 .Build();
-        }
-
-        public ApiSettings GetApiData(ApiSettings config) {
             return Configuration?.GetSection("ApiSettings")?.Get<ApiSettings>();
         }
     }

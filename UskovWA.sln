@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UskovWA", "UskovWA\UskovWA.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YouGileMethods", "YouGileMethods\YouGileMethods.csproj", "{BD1EA554-B5BC-471F-B58D-97A9FE87EB1A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Postgres", "Postgres\Postgres.csproj", "{328CE91B-73CD-43FA-9FCF-2DB053304AC3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{BD1EA554-B5BC-471F-B58D-97A9FE87EB1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD1EA554-B5BC-471F-B58D-97A9FE87EB1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD1EA554-B5BC-471F-B58D-97A9FE87EB1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{328CE91B-73CD-43FA-9FCF-2DB053304AC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{328CE91B-73CD-43FA-9FCF-2DB053304AC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{328CE91B-73CD-43FA-9FCF-2DB053304AC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{328CE91B-73CD-43FA-9FCF-2DB053304AC3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

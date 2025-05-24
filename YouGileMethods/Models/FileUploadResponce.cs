@@ -2,17 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace YouGileMethods.Models
 {
-    public class ApiResponse
+    public class FileUploadResponse
     {
-        public string result { get; set; }
         public string id { get; set; }
-
-        [JsonIgnore]
-        public string fileId{ get; set; }
+        public string name { get; set; }
+        public string url { get; set; }
     }
 }
