@@ -81,13 +81,22 @@
                     }
                 </div>
 
-                <button type="submit" class="submit-button">Отправить заявку</button>
+                <button type="submit" class="submit-button" disabled="@isSubmitting">
+                    @if (isSubmitting)
+                    {
+                        <span class="spinner-border spinner-border-sm" role="status"></span>
+                    }
+                    Отправить заявку
+                </button>
             </EditForm>
         </div>
     </div>
 }
 
 @code {
+
+    private bool isSubmitting = false;
+
     private string errorMessage;
     private bool showModal = false;
     private bool showSuccessNotification = false;
@@ -107,41 +116,42 @@
 
     private async Task HandleFileSelect(InputFileChangeEventArgs e)
     {
-        await Task.Run(() => { 
-        try
+        await Task.Run(() =>
         {
-            errorMessage = null;
-            var file = e.File;
-            var maxFileSize = 10 * 1024 * 1024; // 10MB
-
-            // Проверка размера файла
-            if (file.Size > maxFileSize)
+            try
             {
-                errorMessage = $"Файл слишком большой. Максимальный размер: {maxFileSize / (1024 * 1024)} MB";
-                return;
+                errorMessage = null;
+                var file = e.File;
+                var maxFileSize = 10 * 1024 * 1024; // 10MB
+
+                // Проверка размера файла
+                if (file.Size > maxFileSize)
+                {
+                    errorMessage = $"Файл слишком большой. Максимальный размер: {maxFileSize / (1024 * 1024)} MB";
+                    return;
+                }
+
+                // Проверка расширения
+                var allowedExtensions = new[] { ".dwg", ".dxf", ".pdf", ".svg" };
+                var fileExtension = Path.GetExtension(file.Name).ToLower();
+
+                if (!allowedExtensions.Contains(fileExtension))
+                {
+                    errorMessage = $"Недопустимый формат файла. Разрешены: {string.Join(", ", allowedExtensions)}";
+                    return;
+                }
+
+                // Сохраняем информацию о выбранном файле
+                _orderData.SelectedFile = file;
             }
-
-            // Проверка расширения
-            var allowedExtensions = new[] { ".dwg", ".dxf", ".pdf", ".svg" };
-            var fileExtension = Path.GetExtension(file.Name).ToLower();
-
-            if (!allowedExtensions.Contains(fileExtension))
+            catch (Exception ex)
             {
-                errorMessage = $"Недопустимый формат файла. Разрешены: {string.Join(", ", allowedExtensions)}";
-                return;
+                errorMessage = $"Ошибка при выборе файла: {ex.Message}";
             }
-
-            // Сохраняем информацию о выбранном файле
-            _orderData.SelectedFile = file;
-        }
-        catch (Exception ex)
-        {
-            errorMessage = $"Ошибка при выборе файла: {ex.Message}";
-        }
-        finally
-        {
-            StateHasChanged();
-        }
+            finally
+            {
+                InvokeAsync(StateHasChanged);
+            }
         });
     }
 
@@ -149,6 +159,7 @@
     {
         try
         {
+            isSubmitting = true;
             errorMessage = null;
 
             // Проверка наличия файла
@@ -158,14 +169,13 @@
                 return;
             }
 
-            // Читаем содержимое файла
+            // Чтение файла
             using var memoryStream = new MemoryStream();
             await _orderData.SelectedFile.OpenReadStream().CopyToAsync(memoryStream);
             var fileContent = memoryStream.ToArray();
             var fileName = _orderData.SelectedFile.Name;
 
-
-            //Локально сохраняем файл
+            // Локальное сохранение
             var cleanName = Regex.Replace(_orderData.Name.Trim(), "[^a-zA-Z0-9а-яА-Я]", "_");
             var timestamp = DateTime.Now.ToString("yyyyMMdd_HHmmss");
             var fileExtension = Path.GetExtension(fileName).ToLower();
@@ -174,33 +184,62 @@
             var uploadsFolder = Path.Combine(Environment.WebRootPath, "uploads");
             Directory.CreateDirectory(uploadsFolder);
             await File.WriteAllBytesAsync(Path.Combine(uploadsFolder, newFileName), fileContent);
-            
 
-            // Создаем задачу в YouGile
+            // Создание задачи в YouGile
             var taskData = new TaskData
                 {
                     title = $"Заказ от {_orderData.Name}",
-                    location = "ID_вашей_доски", // Замените на ID доски YouGile
+                    columnId = "785a109d-3310-4f99-b188-a02abe820a40",
                     description = $"Контактные данные:\nТелефон: {_orderData.Phone}\nEmail: {_orderData.Email}",
-                    // Другие необходимые поля
+                    //assignees = Array.Empty<string>(),
+                    //deadline = DateTime.Now.AddDays(7).ToString("yyyy-MM-dd")
                 };
+            if (!await TaskCreator.CheckAuth())
+            {
+                errorMessage = "Ошибка авторизации в YouGile. Проверьте API-ключ.";
+                return;
+            }
+            // 1. Сначала создаем задачу
+            var taskResponse = await TaskCreator.CreateTaskAsync(taskData);
 
-            // Отправляем задачу с файлом
-            var response = await TaskCreator.CreateTaskWithAttachmentAsync(taskData, fileContent, fileName);
+            if (taskResponse == null || string.IsNullOrEmpty(taskResponse.id))
+            {
+                errorMessage = "Не удалось создать задачу в YouGile";
+                return;
+            }
 
-            // Успешное завершение
-            lastOrderNumber = response.id; // Используем ID задачи как номер заявки
+            // 2. Затем загружаем и прикрепляем файл
+            try
+            {
+                var fileUploadResponse = await TaskCreator.UploadFileAsync(fileContent, fileName);
+                var chatId = await TaskCreator.GetTaskChatIdAsync(taskResponse.id);
+                await TaskCreator.SendMessageToChatAsync(chatId, fileUploadResponse.FullUrl);
+            }
+            catch (Exception ex)
+            {
+                // Логируем ошибку загрузки файла, но не прерываем выполнение
+                Console.WriteLine($"Ошибка прикрепления файла: {ex.Message}");
+            }
+
+            lastOrderNumber = taskResponse.id;
             HideModal();
             ShowNotification();
+        }
+        catch (HttpRequestException httpEx)
+        {
+            errorMessage = $"Ошибка API YouGile: {httpEx.Message}";
+            Console.WriteLine($"API Error: {httpEx.StatusCode} - {httpEx.Message}");
         }
         catch (Exception ex)
         {
             errorMessage = $"Ошибка при отправке заявки: {ex.Message}";
-            Console.WriteLine(errorMessage);
+            Console.WriteLine($"Error: {ex}");
         }
         finally
         {
-            StateHasChanged();
+            isSubmitting = false;
+            InvokeAsync(StateHasChanged);
         }
     }
+}
 }

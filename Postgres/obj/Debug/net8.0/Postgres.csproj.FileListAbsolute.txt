@@ -1,0 +1,13 @@
+C:\Users\nshin\source\repos\UskovWA\Postgres\bin\Debug\net8.0\Postgres.deps.json
+C:\Users\nshin\source\repos\UskovWA\Postgres\bin\Debug\net8.0\Postgres.dll
+C:\Users\nshin\source\repos\UskovWA\Postgres\bin\Debug\net8.0\Postgres.pdb
+C:\Users\nshin\source\repos\UskovWA\Postgres\obj\Debug\net8.0\Postgres.csproj.AssemblyReference.cache
+C:\Users\nshin\source\repos\UskovWA\Postgres\obj\Debug\net8.0\Postgres.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nshin\source\repos\UskovWA\Postgres\obj\Debug\net8.0\Postgres.AssemblyInfoInputs.cache
+C:\Users\nshin\source\repos\UskovWA\Postgres\obj\Debug\net8.0\Postgres.AssemblyInfo.cs
+C:\Users\nshin\source\repos\UskovWA\Postgres\obj\Debug\net8.0\Postgres.csproj.CoreCompileInputs.cache
+C:\Users\nshin\source\repos\UskovWA\Postgres\obj\Debug\net8.0\Postgres.sourcelink.json
+C:\Users\nshin\source\repos\UskovWA\Postgres\obj\Debug\net8.0\Postgres.dll
+C:\Users\nshin\source\repos\UskovWA\Postgres\obj\Debug\net8.0\refint\Postgres.dll
+C:\Users\nshin\source\repos\UskovWA\Postgres\obj\Debug\net8.0\Postgres.pdb
+C:\Users\nshin\source\repos\UskovWA\Postgres\obj\Debug\net8.0\ref\Postgres.dll

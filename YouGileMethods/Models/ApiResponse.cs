@@ -9,10 +9,9 @@ namespace YouGileMethods.Models
 {
     public class ApiResponse
     {
-        public string result { get; set; }
         public string id { get; set; }
-
-        [JsonIgnore]
-        public string fileId{ get; set; }
+        public string title { get; set; }
+        public string fileId { get; set; } // Для прикрепленных файлов
+        public string chatId { get; set; }  
     }
 }
