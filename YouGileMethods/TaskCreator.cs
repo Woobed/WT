@@ -62,14 +62,6 @@ namespace YouGileMethods
                 throw new Exception("Failed to create task", ex);
             }
         }
-        public async Task<string> GetTaskChatIdAsync(string taskId)
-        {
-            var response = await _httpClient.GetAsync($"tasks/{taskId}");
-            response.EnsureSuccessStatusCode();
-
-            var taskData = await response.Content.ReadFromJsonAsync<ApiResponse>();
-            return taskData?.chatId; // Вернёт ID чата или null
-        }
 
         public async Task<FileUploadResponse> UploadFileAsync(byte[] fileContent, string fileName)
         {

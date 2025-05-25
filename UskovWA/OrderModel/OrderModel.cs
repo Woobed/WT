@@ -15,7 +15,9 @@ public class OrderModel
     [EmailAddress(ErrorMessage = "Некорректный формат email")]
     public string Email { get; set; }
 
+
+    [StringLength(1000, ErrorMessage = "Максимум 1000 символов")]
+    public string Description { get; set; }
+
     public IBrowserFile SelectedFile { get; set; }
-    public string FileName { get; set; }
-    public byte[] FileContent { get; set; }
 }

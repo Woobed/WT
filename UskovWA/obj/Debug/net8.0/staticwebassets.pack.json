@@ -193,6 +193,10 @@
       "PackagePath": "staticwebassets\\uploads\\asda_20250524_171310.pdf"
     },
     {
+      "Id": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\wwwroot\\uploads\\asda_20250524_171657.pdf",
+      "PackagePath": "staticwebassets\\uploads\\asda_20250524_171657.pdf"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.UskovWA.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },

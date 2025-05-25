@@ -564,6 +564,18 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-szsU6S1JDEtO7qffFpzvhF2EulHfwvx61JgqWxTQ1rs="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"124267"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022szsU6S1JDEtO7qffFpzvhF2EulHfwvx61JgqWxTQ1rs=\u0022"},{"Name":"Last-Modified","Value":"Sat, 24 May 2025 14:13:10 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UskovWA/uploads/asda_20250524_171657.fthm80bidh.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\asda_20250524_171657.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"fthm80bidh"},{"Name":"integrity","Value":"sha256-szsU6S1JDEtO7qffFpzvhF2EulHfwvx61JgqWxTQ1rs="},{"Name":"label","Value":"_content/UskovWA/uploads/asda_20250524_171657.pdf"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"124267"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022szsU6S1JDEtO7qffFpzvhF2EulHfwvx61JgqWxTQ1rs=\u0022"},{"Name":"Last-Modified","Value":"Sat, 24 May 2025 14:16:57 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/UskovWA/uploads/asda_20250524_171657.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\asda_20250524_171657.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-szsU6S1JDEtO7qffFpzvhF2EulHfwvx61JgqWxTQ1rs="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"124267"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022szsU6S1JDEtO7qffFpzvhF2EulHfwvx61JgqWxTQ1rs=\u0022"},{"Name":"Last-Modified","Value":"Sat, 24 May 2025 14:16:57 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/UskovWA/UskovWA.bundle.scp.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\UskovWA.vd9ucyk268.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "4Zlxi4dOdEIdLHiKfrB95m8uuTPGifhdFpkmkGO4msQ=",
+  "Hash": "sQxAl6EpFSCONrKuMn9AIPduFncXi/21OWukOspBwEw=",
   "Source": "UskovWA",
   "BasePath": "_content/UskovWA",
   "Mode": "Default",
@@ -1044,6 +1044,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\asda_20250524_171310.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\wwwroot\\uploads\\asda_20250524_171657.pdf",
+      "SourceId": "UskovWA",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\wwwroot\\",
+      "BasePath": "_content/UskovWA",
+      "RelativePath": "uploads/asda_20250524_171657#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "fthm80bidh",
+      "Integrity": "szsU6S1JDEtO7qffFpzvhF2EulHfwvx61JgqWxTQ1rs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\asda_20250524_171657.pdf"
     }
   ],
   "Endpoints": [
@@ -4888,6 +4909,88 @@
         {
           "Name": "Last-Modified",
           "Value": "Sat, 24 May 2025 14:13:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-szsU6S1JDEtO7qffFpzvhF2EulHfwvx61JgqWxTQ1rs="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/asda_20250524_171657.fthm80bidh.pdf",
+      "AssetFile": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\wwwroot\\uploads\\asda_20250524_171657.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "124267"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"szsU6S1JDEtO7qffFpzvhF2EulHfwvx61JgqWxTQ1rs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 24 May 2025 14:16:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fthm80bidh"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/asda_20250524_171657.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-szsU6S1JDEtO7qffFpzvhF2EulHfwvx61JgqWxTQ1rs="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/asda_20250524_171657.pdf",
+      "AssetFile": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\wwwroot\\uploads\\asda_20250524_171657.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "124267"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"szsU6S1JDEtO7qffFpzvhF2EulHfwvx61JgqWxTQ1rs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 24 May 2025 14:16:57 GMT"
         },
         {
           "Name": "Cache-Control",

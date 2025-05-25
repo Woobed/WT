@@ -63,6 +63,15 @@
                 </div>
 
                 <div class="form-group">
+                    <label>Описание задания и ссылка на чертеж:</label>
+                    <InputTextArea @bind-Value="_orderData.Description"
+                    class="form-control"
+                    style="height: 120px; resize: none;" />
+                    <ValidationMessage For="@(() => _orderData.Description)" />
+                </div>
+
+
+                @*  <div class="form-group">
                     <label>Чертеж или эскиз:</label>
                     <InputFile OnChange="@HandleFileSelect"
                     class="form-control"
@@ -79,7 +88,7 @@
                     {
                         <div class="alert alert-danger mt-2">@errorMessage</div>
                     }
-                </div>
+                </div> *@
 
                 <button type="submit" class="submit-button" disabled="@isSubmitting">
                     @if (isSubmitting)
@@ -163,34 +172,34 @@
             errorMessage = null;
 
             // Проверка наличия файла
-            if (_orderData.SelectedFile == null)
-            {
-                errorMessage = "Пожалуйста, выберите файл";
-                return;
-            }
+            // if (_orderData.SelectedFile == null)
+            // {
+            //     errorMessage = "Пожалуйста, выберите файл";
+            //     return;
+            // }
 
-            // Чтение файла
-            using var memoryStream = new MemoryStream();
-            await _orderData.SelectedFile.OpenReadStream().CopyToAsync(memoryStream);
-            var fileContent = memoryStream.ToArray();
-            var fileName = _orderData.SelectedFile.Name;
+            // // Чтение файла
+            // using var memoryStream = new MemoryStream();
+            // await _orderData.SelectedFile.OpenReadStream().CopyToAsync(memoryStream);
+            // var fileContent = memoryStream.ToArray();
+            // var fileName = _orderData.SelectedFile.Name;
 
-            // Локальное сохранение
-            var cleanName = Regex.Replace(_orderData.Name.Trim(), "[^a-zA-Z0-9а-яА-Я]", "_");
-            var timestamp = DateTime.Now.ToString("yyyyMMdd_HHmmss");
-            var fileExtension = Path.GetExtension(fileName).ToLower();
-            var newFileName = $"{cleanName}_{timestamp}{fileExtension}";
+            // // Локальное сохранение
+            // var cleanName = Regex.Replace(_orderData.Name.Trim(), "[^a-zA-Z0-9а-яА-Я]", "_");
+            // var timestamp = DateTime.Now.ToString("yyyyMMdd_HHmmss");
+            // var fileExtension = Path.GetExtension(fileName).ToLower();
+            // var newFileName = $"{cleanName}_{timestamp}{fileExtension}";
 
-            var uploadsFolder = Path.Combine(Environment.WebRootPath, "uploads");
-            Directory.CreateDirectory(uploadsFolder);
-            await File.WriteAllBytesAsync(Path.Combine(uploadsFolder, newFileName), fileContent);
+            // var uploadsFolder = Path.Combine(Environment.WebRootPath, "uploads");
+            // Directory.CreateDirectory(uploadsFolder);
+            // await File.WriteAllBytesAsync(Path.Combine(uploadsFolder, newFileName), fileContent);
 
             // Создание задачи в YouGile
             var taskData = new TaskData
                 {
                     title = $"Заказ от {_orderData.Name}",
-                    columnId = "785a109d-3310-4f99-b188-a02abe820a40",
-                    description = $"Контактные данные:\nТелефон: {_orderData.Phone}\nEmail: {_orderData.Email}",
+                    columnId = "44eb6e8d-bc8f-4e3c-b699-cff090307104",
+                    description = $"Контактные данные:\nТелефон: {_orderData.Phone}\nEmail: {_orderData.Email}\nСсылка на чертежи: {_orderData.Description}",
                     //assignees = Array.Empty<string>(),
                     //deadline = DateTime.Now.AddDays(7).ToString("yyyy-MM-dd")
                 };
@@ -208,18 +217,18 @@
                 return;
             }
 
-            // 2. Затем загружаем и прикрепляем файл
-            try
-            {
-                var fileUploadResponse = await TaskCreator.UploadFileAsync(fileContent, fileName);
-                var chatId = await TaskCreator.GetTaskChatIdAsync(taskResponse.id);
-                await TaskCreator.SendMessageToChatAsync(chatId, fileUploadResponse.FullUrl);
-            }
-            catch (Exception ex)
-            {
-                // Логируем ошибку загрузки файла, но не прерываем выполнение
-                Console.WriteLine($"Ошибка прикрепления файла: {ex.Message}");
-            }
+            // // 2. Затем загружаем и прикрепляем файл
+            // try
+            // {
+            //     var fileUploadResponse = await TaskCreator.UploadFileAsync(fileContent, fileName);
+            //     var chatId = await TaskCreator.GetTaskChatIdAsync(taskResponse.id);
+            //     await TaskCreator.SendMessageToChatAsync(chatId, fileUploadResponse.FullUrl);
+            // }
+            // catch (Exception ex)
+            // {
+            //     // Логируем ошибку загрузки файла, но не прерываем выполнение
+            //     Console.WriteLine($"Ошибка прикрепления файла: {ex.Message}");
+            // }
 
             lastOrderNumber = taskResponse.id;
             HideModal();
