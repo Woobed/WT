@@ -33,6 +33,9 @@ namespace Postgres.Models
         [StringLength(20)]
         public string Status { get; set; } = "new";
 
+        [Column("task_id")]
+        public string TaskId { get; set; } = string.Empty;
+
         public ICollection<OrderFile> Files { get; set; } = new List<OrderFile>();
     }
 }

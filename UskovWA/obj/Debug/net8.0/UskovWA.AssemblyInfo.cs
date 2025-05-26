@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UskovWA")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b2aaa6e07ea82ac458c23b8b8af6cad09a2fe76f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+65bf2a2bc3b906feaeb5146b05b3556c33c8ef38")]
 [assembly: System.Reflection.AssemblyProductAttribute("UskovWA")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UskovWA")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

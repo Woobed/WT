@@ -38,7 +38,7 @@ namespace YouGileMethods
         }
         public async Task<ApiResponse> CreateTaskAsync(TaskData task)
         {
-            if (string.IsNullOrWhiteSpace(task.columnId))
+            if (string.IsNullOrWhiteSpace(_config.Column))
                 throw new ArgumentException("Column ID is required");
 
             try
@@ -47,7 +47,7 @@ namespace YouGileMethods
                 {
                     task.title,
                     task.description,
-                    task.columnId
+                    columnId = _config.Column
                 };
 
                 var response = await _httpClient.PostAsJsonAsync("tasks", payload);
@@ -55,7 +55,8 @@ namespace YouGileMethods
                 Console.WriteLine(content);
 
                 response.EnsureSuccessStatusCode();
-                return await response.Content.ReadFromJsonAsync<ApiResponse>();
+                var result = await response.Content.ReadFromJsonAsync<ApiResponse>();
+                return result;
             }
             catch (Exception ex)
             {

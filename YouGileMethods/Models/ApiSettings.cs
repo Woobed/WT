@@ -11,5 +11,7 @@ namespace YouGileMethods.Models
     {
         public string apiKey { get; set; }
         public string apiUrl { get; set; }
+        public string Column { get; set; }
+
     }
 }

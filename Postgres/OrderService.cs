@@ -38,6 +38,34 @@ namespace Postgres
                 throw;
             }
         }
+        public async Task<Order> CreateOrderAsync(Order order)
+        {
+            using var transaction = await _context.Database.BeginTransactionAsync();
+
+            try
+            {
+                _context.Orders.Add(order);
+                await _context.SaveChangesAsync();
+
+                /*var orderFile = new OrderFile()
+                {
+                    OrderId = order.Id,
+                    FileName = file.FileName,
+                    UploadedAt = DateTime.UtcNow
+                };
+
+                _context.OrderFiles.Add(orderFile);
+                await _context.SaveChangesAsync();*/
+
+                await transaction.CommitAsync();
+                return order;
+            }
+            catch (Exception ex)
+            {
+                await transaction.RollbackAsync();
+                throw;
+            }
+        }
 
 
     }

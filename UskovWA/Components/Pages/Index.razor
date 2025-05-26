@@ -1,11 +1,15 @@
 ﻿@page "/"
 
+@inject OrderService service
+
 @inject TaskCreator TaskCreator
 
 @using Microsoft.AspNetCore.Components.Forms
 @using System.ComponentModel.DataAnnotations
 @using Microsoft.Extensions.Hosting
 @using System.Text.RegularExpressions
+@using Postgres
+@using Postgres.Models
 @using YouGileMethods
 @using YouGileMethods.Models
 @inject IWebHostEnvironment Environment
@@ -198,11 +202,12 @@
             var taskData = new TaskData
                 {
                     title = $"Заказ от {_orderData.Name}",
-                    columnId = "44eb6e8d-bc8f-4e3c-b699-cff090307104",
                     description = $"Контактные данные:\nТелефон: {_orderData.Phone}\nEmail: {_orderData.Email}\nСсылка на чертежи: {_orderData.Description}",
                     //assignees = Array.Empty<string>(),
                     //deadline = DateTime.Now.AddDays(7).ToString("yyyy-MM-dd")
                 };
+
+
             if (!await TaskCreator.CheckAuth())
             {
                 errorMessage = "Ошибка авторизации в YouGile. Проверьте API-ключ.";
@@ -231,6 +236,15 @@
             // }
 
             lastOrderNumber = taskResponse.id;
+            var order = new Order()
+                {
+                    CustomerName = _orderData.Name,
+                    Phone = _orderData.Phone,
+                    Email = _orderData.Email,
+                    TaskId = lastOrderNumber
+                };
+
+            await service.CreateOrderAsync(order);
             HideModal();
             ShowNotification();
         }

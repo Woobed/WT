@@ -15,7 +15,7 @@ builder.Services.AddScoped<TaskCreator>(provider => new TaskCreator(Configurator
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("PostgreSQL")));
-
+builder.Services.AddScoped<OrderService>();
 
 var app = builder.Build();
 
@@ -31,5 +31,4 @@ app.UseAntiforgery();
 
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
-
 app.Run();
