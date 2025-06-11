@@ -167,7 +167,7 @@
             }
         });
     }
-
+    // обработка заполненной формы
     private async Task HandleSubmit()
     {
         try
@@ -175,34 +175,37 @@
             isSubmitting = true;
             errorMessage = null;
 
-            // Проверка наличия файла
-            // if (_orderData.SelectedFile == null)
-            // {
-            //     errorMessage = "Пожалуйста, выберите файл";
-            //     return;
-            // }
+             //тут была запись в локальный файл (папочка wwwroot/uploads)
 
-            // // Чтение файла
-            // using var memoryStream = new MemoryStream();
-            // await _orderData.SelectedFile.OpenReadStream().CopyToAsync(memoryStream);
-            // var fileContent = memoryStream.ToArray();
-            // var fileName = _orderData.SelectedFile.Name;
+             /*if (_orderData.SelectedFile == null)
+             {
+                 errorMessage = "Пожалуйста, выберите файл";
+                 return;
+             }
 
-            // // Локальное сохранение
-            // var cleanName = Regex.Replace(_orderData.Name.Trim(), "[^a-zA-Z0-9а-яА-Я]", "_");
-            // var timestamp = DateTime.Now.ToString("yyyyMMdd_HHmmss");
-            // var fileExtension = Path.GetExtension(fileName).ToLower();
-            // var newFileName = $"{cleanName}_{timestamp}{fileExtension}";
+             // Чтение файла
+             using var memoryStream = new MemoryStream();
+             await _orderData.SelectedFile.OpenReadStream().CopyToAsync(memoryStream);
+             var fileContent = memoryStream.ToArray();
+             var fileName = _orderData.SelectedFile.Name;
 
-            // var uploadsFolder = Path.Combine(Environment.WebRootPath, "uploads");
-            // Directory.CreateDirectory(uploadsFolder);
-            // await File.WriteAllBytesAsync(Path.Combine(uploadsFolder, newFileName), fileContent);
+             // Локальное сохранение
+             var cleanName = Regex.Replace(_orderData.Name.Trim(), "[^a-zA-Z0-9а-яА-Я]", "_");
+             var timestamp = DateTime.Now.ToString("yyyyMMdd_HHmmss");
+             var fileExtension = Path.GetExtension(fileName).ToLower();
+             var newFileName = $"{cleanName}_{timestamp}{fileExtension}";
+
+             var uploadsFolder = Path.Combine(Environment.WebRootPath, "uploads");
+             Directory.CreateDirectory(uploadsFolder);
+             await File.WriteAllBytesAsync(Path.Combine(uploadsFolder, newFileName), fileContent);*/
 
             // Создание задачи в YouGile
             var taskData = new TaskData
                 {
                     title = $"Заказ от {_orderData.Name}",
                     description = $"Контактные данные:\nТелефон: {_orderData.Phone}\nEmail: {_orderData.Email}\nСсылка на чертежи: {_orderData.Description}",
+                    // эти 2 поля не прошли по эндпоинтам потому выкинуты
+
                     //assignees = Array.Empty<string>(),
                     //deadline = DateTime.Now.AddDays(7).ToString("yyyy-MM-dd")
                 };
@@ -213,6 +216,7 @@
                 errorMessage = "Ошибка авторизации в YouGile. Проверьте API-ключ.";
                 return;
             }
+
             // 1. Сначала создаем задачу
             var taskResponse = await TaskCreator.CreateTaskAsync(taskData);
 
@@ -236,6 +240,7 @@
             // }
 
             lastOrderNumber = taskResponse.id;
+            // создание объекта для базы
             var order = new Order()
                 {
                     CustomerName = _orderData.Name,
@@ -244,8 +249,11 @@
                     TaskId = lastOrderNumber
                 };
 
+            // создание записи в бд
             await service.CreateOrderAsync(order);
+            // сокрытие модалки с формой
             HideModal();
+            // уведомление о создании заказа
             ShowNotification();
         }
         catch (HttpRequestException httpEx)
@@ -261,6 +269,7 @@
         finally
         {
             isSubmitting = false;
+            // динамичиское обновление вьюхи
             InvokeAsync(StateHasChanged);
         }
     }

@@ -4,13 +4,14 @@ namespace Postgres
 {
     public class OrderService
     {
+        // контекст бд
         private AppDbContext _context;
 
         public OrderService(AppDbContext context)
         {
             _context = context;
         }
-        public async Task<Order> CreateOrderAsync(Order order, OrderFile file)
+        /*public async Task<Order> CreateOrderAsync(Order order, OrderFile file)
         {
             using var transaction = await _context.Database.BeginTransactionAsync();
 
@@ -37,7 +38,9 @@ namespace Postgres
                 await transaction.RollbackAsync();
                 throw;
             }
-        }
+        }*/
+
+        // метод создания заказа в бд (транзакция)
         public async Task<Order> CreateOrderAsync(Order order)
         {
             using var transaction = await _context.Database.BeginTransactionAsync();

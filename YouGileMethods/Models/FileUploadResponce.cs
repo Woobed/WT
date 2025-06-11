@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace YouGileMethods.Models
 {
+    // моделька для загрузки файлов (не используется)
     public class FileUploadResponse
     {
         public string Result { get; set; }

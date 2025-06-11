@@ -1,7 +1,7 @@
-﻿
-using Microsoft.AspNetCore.Components.Forms;
+﻿using Microsoft.AspNetCore.Components.Forms;
 using System.ComponentModel.DataAnnotations;
 
+// моделька для формы на вьюхе
 public class OrderModel
 {
     [Required(ErrorMessage = "ФИО обязательно")]

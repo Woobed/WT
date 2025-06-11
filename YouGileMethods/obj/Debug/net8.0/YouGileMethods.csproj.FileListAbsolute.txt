@@ -6,8 +6,8 @@ C:\Users\nshin\source\repos\UskovWA\YouGileMethods\obj\Debug\net8.0\YouGileMetho
 C:\Users\nshin\source\repos\UskovWA\YouGileMethods\obj\Debug\net8.0\YouGileMethods.AssemblyInfoInputs.cache
 C:\Users\nshin\source\repos\UskovWA\YouGileMethods\obj\Debug\net8.0\YouGileMethods.AssemblyInfo.cs
 C:\Users\nshin\source\repos\UskovWA\YouGileMethods\obj\Debug\net8.0\YouGileMethods.csproj.CoreCompileInputs.cache
+C:\Users\nshin\source\repos\UskovWA\YouGileMethods\obj\Debug\net8.0\YouGileMethods.sourcelink.json
 C:\Users\nshin\source\repos\UskovWA\YouGileMethods\obj\Debug\net8.0\YouGileMethods.dll
 C:\Users\nshin\source\repos\UskovWA\YouGileMethods\obj\Debug\net8.0\refint\YouGileMethods.dll
 C:\Users\nshin\source\repos\UskovWA\YouGileMethods\obj\Debug\net8.0\YouGileMethods.pdb
 C:\Users\nshin\source\repos\UskovWA\YouGileMethods\obj\Debug\net8.0\ref\YouGileMethods.dll
-C:\Users\nshin\source\repos\UskovWA\YouGileMethods\obj\Debug\net8.0\YouGileMethods.sourcelink.json

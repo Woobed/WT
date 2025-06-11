@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace YouGileMethods.Models
 {
+    // моделька для получения ответа от апи
     public class ApiResponse
     {
         public string id { get; set; }

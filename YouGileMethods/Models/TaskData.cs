@@ -1,4 +1,6 @@
-﻿public class TaskData
+﻿
+// данные для создания задания в апи
+public class TaskData
 {
     public string title { get; set; }
     public string description { get; set; }

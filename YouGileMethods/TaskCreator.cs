@@ -10,8 +10,10 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace YouGileMethods
 {
+    // класс для работы с апи
     public class TaskCreator
     {
+        // httpclient для работы с RESTApi
         private readonly HttpClient _httpClient;
         private readonly ApiSettings _config;
 
@@ -19,11 +21,13 @@ namespace YouGileMethods
         {
             _config = config ?? throw new ArgumentNullException(nameof(config));
             _httpClient = new HttpClient();
+            //авторизация в апи
             _httpClient.DefaultRequestHeaders.Authorization =
                 new AuthenticationHeaderValue("Bearer", _config.apiKey);
             _httpClient.BaseAddress = new Uri(_config.apiUrl);
         }
 
+        // метод проверки авторизации в апи
         public async Task<bool> CheckAuth()
         {
             try
@@ -36,6 +40,8 @@ namespace YouGileMethods
                 return false;
             }
         }
+
+        // метод создания таски в апи
         public async Task<ApiResponse> CreateTaskAsync(TaskData task)
         {
             if (string.IsNullOrWhiteSpace(_config.Column))
@@ -43,6 +49,7 @@ namespace YouGileMethods
 
             try
             {
+                // объект который будет отправлен в апи
                 var payload = new
                 {
                     task.title,
@@ -51,10 +58,15 @@ namespace YouGileMethods
                 };
 
                 var response = await _httpClient.PostAsJsonAsync("tasks", payload);
+
+                //2 строки для вывода ответа в консоль
                 var content = await response.Content.ReadAsStringAsync();
                 Console.WriteLine(content);
 
+                // проверка статуса ответа
                 response.EnsureSuccessStatusCode();
+                
+                // непосредственно объект ответа апи
                 var result = await response.Content.ReadFromJsonAsync<ApiResponse>();
                 return result;
             }
@@ -64,6 +76,7 @@ namespace YouGileMethods
             }
         }
 
+        // метод для отправки файла (не используется)
         public async Task<FileUploadResponse> UploadFileAsync(byte[] fileContent, string fileName)
         {
             var content = new MultipartFormDataContent();
@@ -80,6 +93,7 @@ namespace YouGileMethods
             return result;
         }
 
+        // метод для написания в чат (не используется)
         public async Task SendMessageToChatAsync(string chatId, string fileUrl)
         {
             var payload = new
