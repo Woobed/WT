@@ -1,11 +1,11 @@
 ﻿using System;
 using System.IO;
 using Microsoft.Extensions.Configuration;
-using YouGileMethods.Abstractions;
 using YouGileMethods.Models;
 
 namespace UskovWA
 {
+    // конфигуратор который тянет объект ApiSettings из appsettings
     public static class Configurator
     {
         public static ApiSettings GetApiData() {

@@ -25,8 +25,8 @@
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
-      "Id": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\wwwroot\\images\\BaseBackground.jpg",
-      "PackagePath": "staticwebassets\\images\\BaseBackground.jpg"
+      "Id": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\wwwroot\\images\\background.jpg",
+      "PackagePath": "staticwebassets\\images\\background.jpg"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.UskovWA.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

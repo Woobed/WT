@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "3c+b31wuhQD4+LSXQUhFVM/Tprm+6OpUMfqsvHCCwtw=",
+  "Hash": "tKjWEbOcxmqj3r5PKqqOX91QIUTIt325XKwch076tBI=",
   "Source": "UskovWA",
   "BasePath": "_content/UskovWA",
   "Mode": "Default",
@@ -136,8 +136,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "w94xl06ef6",
-      "Integrity": "5KjaAqkJIPtuVovcQAtBTDBKN1l91fFE6tauOg1ck6g=",
+      "Fingerprint": "5zzwbykkth",
+      "Integrity": "IXH2y8JUBPBDFe45pda9pgek8AGL/c4UKKo1LWEECZg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\CSS\\site.css"
@@ -164,12 +164,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.png"
     },
     {
-      "Identity": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\wwwroot\\images\\BaseBackground.jpg",
+      "Identity": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\wwwroot\\images\\background.jpg",
       "SourceId": "UskovWA",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\wwwroot\\",
       "BasePath": "_content/UskovWA",
-      "RelativePath": "images/BaseBackground#[.{fingerprint}]?.jpg",
+      "RelativePath": "images/background#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -178,11 +178,11 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "4gv548s0ub",
-      "Integrity": "dJJ/TI8LFdBBenMiix6afHYp2nlDVULKz3fpvcbs2uk=",
+      "Fingerprint": "s7wmxeavvv",
+      "Integrity": "mGUO2jhGyP10uQ4H1rQ1ELvxHamCIz14jLRbmZGMuP0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\BaseBackground.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\background.jpg"
     }
   ],
   "Endpoints": [
@@ -433,6 +433,51 @@
       ]
     },
     {
+      "Route": "CSS/site.5zzwbykkth.css",
+      "AssetFile": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\wwwroot\\CSS\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3348"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IXH2y8JUBPBDFe45pda9pgek8AGL/c4UKKo1LWEECZg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 13 Jun 2025 11:47:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5zzwbykkth"
+        },
+        {
+          "Name": "label",
+          "Value": "CSS/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-IXH2y8JUBPBDFe45pda9pgek8AGL/c4UKKo1LWEECZg="
+        }
+      ]
+    },
+    {
       "Route": "CSS/site.css",
       "AssetFile": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\wwwroot\\CSS\\site.css",
       "Selectors": [],
@@ -443,7 +488,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3209"
+          "Value": "3348"
         },
         {
           "Name": "Content-Type",
@@ -451,11 +496,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"5KjaAqkJIPtuVovcQAtBTDBKN1l91fFE6tauOg1ck6g=\""
+          "Value": "\"IXH2y8JUBPBDFe45pda9pgek8AGL/c4UKKo1LWEECZg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 07:44:50 GMT"
+          "Value": "Fri, 13 Jun 2025 11:47:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -465,52 +510,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-5KjaAqkJIPtuVovcQAtBTDBKN1l91fFE6tauOg1ck6g="
-        }
-      ]
-    },
-    {
-      "Route": "CSS/site.w94xl06ef6.css",
-      "AssetFile": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\wwwroot\\CSS\\site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "3209"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"5KjaAqkJIPtuVovcQAtBTDBKN1l91fFE6tauOg1ck6g=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 24 May 2025 07:44:50 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "w94xl06ef6"
-        },
-        {
-          "Name": "label",
-          "Value": "CSS/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-5KjaAqkJIPtuVovcQAtBTDBKN1l91fFE6tauOg1ck6g="
+          "Value": "sha256-IXH2y8JUBPBDFe45pda9pgek8AGL/c4UKKo1LWEECZg="
         }
       ]
     },
@@ -597,8 +597,8 @@
       ]
     },
     {
-      "Route": "images/BaseBackground.4gv548s0ub.jpg",
-      "AssetFile": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\wwwroot\\images\\BaseBackground.jpg",
+      "Route": "images/background.jpg",
+      "AssetFile": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\wwwroot\\images\\background.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -607,7 +607,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "194193"
+          "Value": "1205796"
         },
         {
           "Name": "Content-Type",
@@ -615,56 +615,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"dJJ/TI8LFdBBenMiix6afHYp2nlDVULKz3fpvcbs2uk=\""
+          "Value": "\"mGUO2jhGyP10uQ4H1rQ1ELvxHamCIz14jLRbmZGMuP0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 22 May 2025 15:49:32 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "4gv548s0ub"
-        },
-        {
-          "Name": "label",
-          "Value": "images/BaseBackground.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-dJJ/TI8LFdBBenMiix6afHYp2nlDVULKz3fpvcbs2uk="
-        }
-      ]
-    },
-    {
-      "Route": "images/BaseBackground.jpg",
-      "AssetFile": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\wwwroot\\images\\BaseBackground.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "194193"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"dJJ/TI8LFdBBenMiix6afHYp2nlDVULKz3fpvcbs2uk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 22 May 2025 15:49:32 GMT"
+          "Value": "Fri, 13 Jun 2025 11:21:36 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -674,7 +629,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-dJJ/TI8LFdBBenMiix6afHYp2nlDVULKz3fpvcbs2uk="
+          "Value": "sha256-mGUO2jhGyP10uQ4H1rQ1ELvxHamCIz14jLRbmZGMuP0="
+        }
+      ]
+    },
+    {
+      "Route": "images/background.s7wmxeavvv.jpg",
+      "AssetFile": "C:\\Users\\nshin\\source\\repos\\UskovWA\\UskovWA\\wwwroot\\images\\background.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1205796"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mGUO2jhGyP10uQ4H1rQ1ELvxHamCIz14jLRbmZGMuP0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 13 Jun 2025 11:21:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "s7wmxeavvv"
+        },
+        {
+          "Name": "label",
+          "Value": "images/background.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-mGUO2jhGyP10uQ4H1rQ1ELvxHamCIz14jLRbmZGMuP0="
         }
       ]
     },
@@ -701,7 +701,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 26 May 2025 09:56:17 GMT"
+          "Value": "Fri, 13 Jun 2025 11:24:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -738,7 +738,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 26 May 2025 09:56:17 GMT"
+          "Value": "Fri, 13 Jun 2025 11:24:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -775,7 +775,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 26 May 2025 09:56:17 GMT"
+          "Value": "Fri, 13 Jun 2025 11:24:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -820,7 +820,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 26 May 2025 09:56:17 GMT"
+          "Value": "Fri, 13 Jun 2025 11:24:29 GMT"
         },
         {
           "Name": "Cache-Control",
